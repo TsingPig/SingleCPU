@@ -6,7 +6,7 @@ output reg [k-1:0]Add_Result;
 output Add_Carry,Add_Overflow,Add_Sign,Zero;
 reg Add_Carry;
 assign Zero=~|Add_Result;
-assign Add_Sign=Add_Result[31];
+assign Add_Sign=Add_Result[31];	//жпнд
 assign Add_Overflow=Add_Carry^Add_Result[k-1]^X[k-1]^Y[k-1];
 always @(X or Y or Cin)
 {Add_Carry,Add_Result}=X+Y+Cin;

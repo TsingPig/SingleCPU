@@ -1,4 +1,4 @@
-¿module Adder(Cin,X,Y,Add_Carry,Add_Overflow,Add_Sign,Add_Result,Zero);
+module Adder(Cin,X,Y,Add_Carry,Add_Overflow,Add_Sign,Add_Result,Zero);
 parameter k=32;
 input [k-1:0] X,Y;
 input Cin;

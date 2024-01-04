@@ -9,7 +9,7 @@ module singleCPU(clk, I, busA, busB, AluB, AluF, busW, Datain, Dataout);
 	dataroad dataroadbj(clk, RegWr, Branch, Jump, ExtOp, AluSrc, ALUctr, MemWr, MemtoReg, RegDst, 
 	I, busA, busB, AluB, AluF, busW, Datain, Dataout);
 
-	assign op = I[31:26];	// op表示指令的前6位
+	assign op = I[31:26];	// opָ���ǰ6λ
 	assign func = I[5:0];
 	decoding qzbj(op, func, RegWr,Branch, Jump, ExtOp, AluSrc, ALUctr, MemWr, MemtoReg, RegDst);
-endmodule
+endmodule 

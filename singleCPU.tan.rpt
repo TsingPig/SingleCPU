@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for singleCPU
-Thu Jan 04 10:31:30 2024
+Thu Jan 04 10:42:48 2024
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -522,7 +522,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Jan 04 10:31:30 2024
+    Info: Processing started: Thu Jan 04 10:42:48 2024
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off singleCPU -c singleCPU --timing_analysis_only
 Warning: Timing Analysis is analyzing one or more combinational loops as latches
     Warning: Node "decoding:qzbj|Aluctr[2]" is a latch
@@ -629,40 +629,40 @@ Info: tco from clock "clk" to destination pin "AluF[26]" through register "decod
     Info: + Longest register to pin delay is 9.324 ns
         Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X3_Y22_N10; Fanout = 95; REG Node = 'decoding:qzbj|Aluctr[2]'
         Info: 2: + IC(0.280 ns) + CELL(0.150 ns) = 0.430 ns; Loc. = LCCOMB_X3_Y22_N16; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|X[0]'
-        Info: 3: + IC(0.443 ns) + CELL(0.414 ns) = 1.287 ns; Loc. = LCCOMB_X2_Y22_N16; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~3'
-        Info: 4: + IC(0.000 ns) + CELL(0.071 ns) = 1.358 ns; Loc. = LCCOMB_X2_Y22_N18; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~5'
-        Info: 5: + IC(0.000 ns) + CELL(0.071 ns) = 1.429 ns; Loc. = LCCOMB_X2_Y22_N20; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~7'
-        Info: 6: + IC(0.000 ns) + CELL(0.071 ns) = 1.500 ns; Loc. = LCCOMB_X2_Y22_N22; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~9'
-        Info: 7: + IC(0.000 ns) + CELL(0.071 ns) = 1.571 ns; Loc. = LCCOMB_X2_Y22_N24; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~11'
-        Info: 8: + IC(0.000 ns) + CELL(0.071 ns) = 1.642 ns; Loc. = LCCOMB_X2_Y22_N26; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~13'
-        Info: 9: + IC(0.000 ns) + CELL(0.071 ns) = 1.713 ns; Loc. = LCCOMB_X2_Y22_N28; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~15'
-        Info: 10: + IC(0.000 ns) + CELL(0.146 ns) = 1.859 ns; Loc. = LCCOMB_X2_Y22_N30; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~17'
-        Info: 11: + IC(0.000 ns) + CELL(0.071 ns) = 1.930 ns; Loc. = LCCOMB_X2_Y21_N0; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~19'
-        Info: 12: + IC(0.000 ns) + CELL(0.071 ns) = 2.001 ns; Loc. = LCCOMB_X2_Y21_N2; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~21'
-        Info: 13: + IC(0.000 ns) + CELL(0.071 ns) = 2.072 ns; Loc. = LCCOMB_X2_Y21_N4; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~23'
-        Info: 14: + IC(0.000 ns) + CELL(0.071 ns) = 2.143 ns; Loc. = LCCOMB_X2_Y21_N6; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~25'
-        Info: 15: + IC(0.000 ns) + CELL(0.071 ns) = 2.214 ns; Loc. = LCCOMB_X2_Y21_N8; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~27'
-        Info: 16: + IC(0.000 ns) + CELL(0.071 ns) = 2.285 ns; Loc. = LCCOMB_X2_Y21_N10; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~29'
-        Info: 17: + IC(0.000 ns) + CELL(0.071 ns) = 2.356 ns; Loc. = LCCOMB_X2_Y21_N12; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~31'
-        Info: 18: + IC(0.000 ns) + CELL(0.159 ns) = 2.515 ns; Loc. = LCCOMB_X2_Y21_N14; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~33'
-        Info: 19: + IC(0.000 ns) + CELL(0.071 ns) = 2.586 ns; Loc. = LCCOMB_X2_Y21_N16; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~35'
-        Info: 20: + IC(0.000 ns) + CELL(0.071 ns) = 2.657 ns; Loc. = LCCOMB_X2_Y21_N18; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~37'
-        Info: 21: + IC(0.000 ns) + CELL(0.071 ns) = 2.728 ns; Loc. = LCCOMB_X2_Y21_N20; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~39'
-        Info: 22: + IC(0.000 ns) + CELL(0.071 ns) = 2.799 ns; Loc. = LCCOMB_X2_Y21_N22; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~41'
-        Info: 23: + IC(0.000 ns) + CELL(0.071 ns) = 2.870 ns; Loc. = LCCOMB_X2_Y21_N24; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~43'
-        Info: 24: + IC(0.000 ns) + CELL(0.071 ns) = 2.941 ns; Loc. = LCCOMB_X2_Y21_N26; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~45'
-        Info: 25: + IC(0.000 ns) + CELL(0.071 ns) = 3.012 ns; Loc. = LCCOMB_X2_Y21_N28; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~47'
-        Info: 26: + IC(0.000 ns) + CELL(0.146 ns) = 3.158 ns; Loc. = LCCOMB_X2_Y21_N30; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~49'
-        Info: 27: + IC(0.000 ns) + CELL(0.071 ns) = 3.229 ns; Loc. = LCCOMB_X2_Y20_N0; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~51'
-        Info: 28: + IC(0.000 ns) + CELL(0.071 ns) = 3.300 ns; Loc. = LCCOMB_X2_Y20_N2; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~53'
-        Info: 29: + IC(0.000 ns) + CELL(0.410 ns) = 3.710 ns; Loc. = LCCOMB_X2_Y20_N4; Fanout = 3; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:ad|Add0~54'
+        Info: 3: + IC(0.443 ns) + CELL(0.414 ns) = 1.287 ns; Loc. = LCCOMB_X2_Y22_N16; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~3'
+        Info: 4: + IC(0.000 ns) + CELL(0.071 ns) = 1.358 ns; Loc. = LCCOMB_X2_Y22_N18; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~5'
+        Info: 5: + IC(0.000 ns) + CELL(0.071 ns) = 1.429 ns; Loc. = LCCOMB_X2_Y22_N20; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~7'
+        Info: 6: + IC(0.000 ns) + CELL(0.071 ns) = 1.500 ns; Loc. = LCCOMB_X2_Y22_N22; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~9'
+        Info: 7: + IC(0.000 ns) + CELL(0.071 ns) = 1.571 ns; Loc. = LCCOMB_X2_Y22_N24; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~11'
+        Info: 8: + IC(0.000 ns) + CELL(0.071 ns) = 1.642 ns; Loc. = LCCOMB_X2_Y22_N26; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~13'
+        Info: 9: + IC(0.000 ns) + CELL(0.071 ns) = 1.713 ns; Loc. = LCCOMB_X2_Y22_N28; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~15'
+        Info: 10: + IC(0.000 ns) + CELL(0.146 ns) = 1.859 ns; Loc. = LCCOMB_X2_Y22_N30; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~17'
+        Info: 11: + IC(0.000 ns) + CELL(0.071 ns) = 1.930 ns; Loc. = LCCOMB_X2_Y21_N0; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~19'
+        Info: 12: + IC(0.000 ns) + CELL(0.071 ns) = 2.001 ns; Loc. = LCCOMB_X2_Y21_N2; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~21'
+        Info: 13: + IC(0.000 ns) + CELL(0.071 ns) = 2.072 ns; Loc. = LCCOMB_X2_Y21_N4; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~23'
+        Info: 14: + IC(0.000 ns) + CELL(0.071 ns) = 2.143 ns; Loc. = LCCOMB_X2_Y21_N6; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~25'
+        Info: 15: + IC(0.000 ns) + CELL(0.071 ns) = 2.214 ns; Loc. = LCCOMB_X2_Y21_N8; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~27'
+        Info: 16: + IC(0.000 ns) + CELL(0.071 ns) = 2.285 ns; Loc. = LCCOMB_X2_Y21_N10; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~29'
+        Info: 17: + IC(0.000 ns) + CELL(0.071 ns) = 2.356 ns; Loc. = LCCOMB_X2_Y21_N12; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~31'
+        Info: 18: + IC(0.000 ns) + CELL(0.159 ns) = 2.515 ns; Loc. = LCCOMB_X2_Y21_N14; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~33'
+        Info: 19: + IC(0.000 ns) + CELL(0.071 ns) = 2.586 ns; Loc. = LCCOMB_X2_Y21_N16; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~35'
+        Info: 20: + IC(0.000 ns) + CELL(0.071 ns) = 2.657 ns; Loc. = LCCOMB_X2_Y21_N18; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~37'
+        Info: 21: + IC(0.000 ns) + CELL(0.071 ns) = 2.728 ns; Loc. = LCCOMB_X2_Y21_N20; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~39'
+        Info: 22: + IC(0.000 ns) + CELL(0.071 ns) = 2.799 ns; Loc. = LCCOMB_X2_Y21_N22; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~41'
+        Info: 23: + IC(0.000 ns) + CELL(0.071 ns) = 2.870 ns; Loc. = LCCOMB_X2_Y21_N24; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~43'
+        Info: 24: + IC(0.000 ns) + CELL(0.071 ns) = 2.941 ns; Loc. = LCCOMB_X2_Y21_N26; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~45'
+        Info: 25: + IC(0.000 ns) + CELL(0.071 ns) = 3.012 ns; Loc. = LCCOMB_X2_Y21_N28; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~47'
+        Info: 26: + IC(0.000 ns) + CELL(0.146 ns) = 3.158 ns; Loc. = LCCOMB_X2_Y21_N30; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~49'
+        Info: 27: + IC(0.000 ns) + CELL(0.071 ns) = 3.229 ns; Loc. = LCCOMB_X2_Y20_N0; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~51'
+        Info: 28: + IC(0.000 ns) + CELL(0.071 ns) = 3.300 ns; Loc. = LCCOMB_X2_Y20_N2; Fanout = 2; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~53'
+        Info: 29: + IC(0.000 ns) + CELL(0.410 ns) = 3.710 ns; Loc. = LCCOMB_X2_Y20_N4; Fanout = 3; COMB Node = 'dataroad:dataroadbj|alu:alu1|Adder:adder|Add0~54'
         Info: 30: + IC(1.185 ns) + CELL(0.150 ns) = 5.045 ns; Loc. = LCCOMB_X1_Y20_N12; Fanout = 1; COMB Node = 'dataroad:dataroadbj|alu:alu1|MUX3to1:m3|D[26]~83'
         Info: 31: + IC(1.667 ns) + CELL(2.612 ns) = 9.324 ns; Loc. = PIN_M5; Fanout = 0; PIN Node = 'AluF[26]'
         Info: Total cell delay = 5.749 ns ( 61.66 % )
         Info: Total interconnect delay = 3.575 ns ( 38.34 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 218 megabytes
-    Info: Processing ended: Thu Jan 04 10:31:30 2024
+    Info: Peak virtual memory: 217 megabytes
+    Info: Processing ended: Thu Jan 04 10:42:48 2024
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

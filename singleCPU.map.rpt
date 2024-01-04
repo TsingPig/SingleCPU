@@ -1,5 +1,5 @@
 Analysis & Synthesis report for singleCPU
-Thu Jan 04 10:31:19 2024
+Thu Jan 04 10:42:37 2024
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -21,19 +21,17 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
  13. Parameter Settings for User Entity Instance: dataroad:dataroadbj
  14. Parameter Settings for User Entity Instance: dataroad:dataroadbj|MUX2to1:mux6
  15. Parameter Settings for User Entity Instance: dataroad:dataroadbj|MUX2to1:mux7
- 16. Parameter Settings for User Entity Instance: dataroad:dataroadbj|alu:alu1
- 17. Parameter Settings for User Entity Instance: dataroad:dataroadbj|alu:alu1|Adder:ad
- 18. Parameter Settings for User Entity Instance: dataroad:dataroadbj|alu:alu1|MUX2to1:m1
- 19. Parameter Settings for User Entity Instance: dataroad:dataroadbj|alu:alu1|MUX2to1:m2
- 20. Parameter Settings for User Entity Instance: dataroad:dataroadbj|alu:alu1|MUX3to1:m3
- 21. Parameter Settings for User Entity Instance: dataroad:dataroadbj|MUX2to1:mux8
- 22. Port Connectivity Checks: "dataroad:dataroadbj|DataMemory:datamem"
- 23. Port Connectivity Checks: "dataroad:dataroadbj|alu:alu1|MUX2to1:m2"
- 24. Port Connectivity Checks: "dataroad:dataroadbj|alu:alu1|MUX2to1:m1"
- 25. Port Connectivity Checks: "dataroad:dataroadbj|Reg:regs"
- 26. Port Connectivity Checks: "dataroad:dataroadbj|MUX2to1:mux6"
- 27. Analysis & Synthesis Messages
- 28. Analysis & Synthesis Suppressed Messages
+ 16. Parameter Settings for User Entity Instance: dataroad:dataroadbj|alu:alu1|Adder:adder
+ 17. Parameter Settings for User Entity Instance: dataroad:dataroadbj|alu:alu1|MUX2to1:m1
+ 18. Parameter Settings for User Entity Instance: dataroad:dataroadbj|alu:alu1|MUX2to1:m2
+ 19. Parameter Settings for User Entity Instance: dataroad:dataroadbj|alu:alu1|MUX3to1:m3
+ 20. Parameter Settings for User Entity Instance: dataroad:dataroadbj|MUX2to1:mux8
+ 21. Port Connectivity Checks: "dataroad:dataroadbj|DataMemory:datamem"
+ 22. Port Connectivity Checks: "dataroad:dataroadbj|alu:alu1|MUX2to1:m2"
+ 23. Port Connectivity Checks: "dataroad:dataroadbj|alu:alu1|MUX2to1:m1"
+ 24. Port Connectivity Checks: "dataroad:dataroadbj|Reg:regs"
+ 25. Port Connectivity Checks: "dataroad:dataroadbj|MUX2to1:mux6"
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -59,7 +57,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jan 04 10:31:19 2024        ;
+; Analysis & Synthesis Status        ; Successful - Thu Jan 04 10:42:37 2024        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; singleCPU                                    ;
 ; Top-level Entity Name              ; singleCPU                                    ;
@@ -213,23 +211,23 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                        ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+--------------+
-; |singleCPU                 ; 179 (0)           ; 10 (0)       ; 0           ; 0            ; 0       ; 0         ; 257  ; 0            ; |singleCPU                                         ; work         ;
-;    |dataroad:dataroadbj|   ; 166 (1)           ; 10 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|dataroad:dataroadbj                     ;              ;
-;       |MUX2to1:mux6|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|dataroad:dataroadbj|MUX2to1:mux6        ; work         ;
-;       |MUX2to1:mux7|       ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|dataroad:dataroadbj|MUX2to1:mux7        ; work         ;
-;       |MUX2to1:mux8|       ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|dataroad:dataroadbj|MUX2to1:mux8        ; work         ;
-;       |Reg:regs|           ; 5 (5)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|dataroad:dataroadbj|Reg:regs            ; work         ;
-;       |alu:alu1|           ; 73 (4)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|dataroad:dataroadbj|alu:alu1            ;              ;
-;          |Adder:ad|        ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|dataroad:dataroadbj|alu:alu1|Adder:ad   ; work         ;
-;          |MUX3to1:m3|      ; 35 (35)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|dataroad:dataroadbj|alu:alu1|MUX3to1:m3 ; work         ;
-;       |fetchins:fetch|     ; 50 (50)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|dataroad:dataroadbj|fetchins:fetch      ; work         ;
-;    |decoding:qzbj|         ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|decoding:qzbj                           ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                 ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
+; |singleCPU                 ; 179 (0)           ; 10 (0)       ; 0           ; 0            ; 0       ; 0         ; 257  ; 0            ; |singleCPU                                          ; work         ;
+;    |dataroad:dataroadbj|   ; 166 (1)           ; 10 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|dataroad:dataroadbj                      ;              ;
+;       |MUX2to1:mux6|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|dataroad:dataroadbj|MUX2to1:mux6         ; work         ;
+;       |MUX2to1:mux7|       ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|dataroad:dataroadbj|MUX2to1:mux7         ; work         ;
+;       |MUX2to1:mux8|       ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|dataroad:dataroadbj|MUX2to1:mux8         ; work         ;
+;       |Reg:regs|           ; 5 (5)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|dataroad:dataroadbj|Reg:regs             ; work         ;
+;       |alu:alu1|           ; 73 (4)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|dataroad:dataroadbj|alu:alu1             ; work         ;
+;          |Adder:adder|     ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|dataroad:dataroadbj|alu:alu1|Adder:adder ; work         ;
+;          |MUX3to1:m3|      ; 35 (35)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|dataroad:dataroadbj|alu:alu1|MUX3to1:m3  ; work         ;
+;       |fetchins:fetch|     ; 50 (50)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|dataroad:dataroadbj|fetchins:fetch       ; work         ;
+;    |decoding:qzbj|         ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |singleCPU|decoding:qzbj                            ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1346,23 +1344,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: dataroad:dataroadbj|alu:alu1 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; n              ; 32    ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: dataroad:dataroadbj|alu:alu1|Adder:ad ;
-+----------------+-------+-----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                      ;
-+----------------+-------+-----------------------------------------------------------+
-; k              ; 32    ; Signed Integer                                            ;
-+----------------+-------+-----------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dataroad:dataroadbj|alu:alu1|Adder:adder ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; k              ; 32    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1371,7 +1359,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                        ;
 +----------------+-------+-------------------------------------------------------------+
-; k              ; 1     ; Signed Integer                                              ;
+; k              ; 32    ; Signed Integer                                              ;
 +----------------+-------+-------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1427,13 +1415,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dataroad:dataroadbj|alu:alu1|MUX2to1:m1"                                                                                                                                ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                                 ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Z    ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND. ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dataroad:dataroadbj|alu:alu1|MUX2to1:m1"                                                                                                        ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                     ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; X        ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "X[31..1]" will be connected to GND. ;
+; Y        ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "Y[31..1]" will be connected to GND. ;
+; Z[31..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                         ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1466,7 +1456,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Jan 04 10:31:18 2024
+    Info: Processing started: Thu Jan 04 10:42:35 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off singleCPU -c singleCPU
 Info: Found 1 design units, including 1 entities, in source file adder.v
     Info: Found entity 1: Adder
@@ -1501,8 +1491,7 @@ Warning (10030): Net "inst_mem.we_a" at fetchins.v(15) has no driver or initial 
 Info: Elaborating entity "MUX2to1" for hierarchy "dataroad:dataroadbj|MUX2to1:mux6"
 Info: Elaborating entity "Reg" for hierarchy "dataroad:dataroadbj|Reg:regs"
 Info: Elaborating entity "alu" for hierarchy "dataroad:dataroadbj|alu:alu1"
-Info: Elaborating entity "Adder" for hierarchy "dataroad:dataroadbj|alu:alu1|Adder:ad"
-Info: Elaborating entity "MUX2to1" for hierarchy "dataroad:dataroadbj|alu:alu1|MUX2to1:m1"
+Info: Elaborating entity "Adder" for hierarchy "dataroad:dataroadbj|alu:alu1|Adder:adder"
 Info: Elaborating entity "MUX3to1" for hierarchy "dataroad:dataroadbj|alu:alu1|MUX3to1:m3"
 Warning (10240): Verilog HDL Always Construct warning at MUX3to1.v(6): inferring latch(es) for variable "D", which holds its previous value in one or more paths through the always construct
 Info (10041): Inferred latch for "D[0]" at MUX3to1.v(8)
@@ -1563,38 +1552,6 @@ Info (10041): Inferred latch for "RegWr" at decoding.v(14)
 Info (10041): Inferred latch for "AluSrc" at decoding.v(14)
 Info (10041): Inferred latch for "Jump" at decoding.v(14)
 Info (10041): Inferred latch for "Branch" at decoding.v(14)
-Warning: Net is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[31]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[30]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[29]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[28]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[27]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[26]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[25]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[24]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[23]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[22]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[21]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[20]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[19]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[18]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[17]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[16]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[15]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[14]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[13]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[12]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[11]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[10]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[9]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[8]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[7]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[6]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[5]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[4]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[3]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[2]" is missing source, defaulting to GND
-    Warning (12110): Net "dataroad:dataroadbj|alu:alu1|Less[1]" is missing source, defaulting to GND
 Info: Found 2 instances of uninferred RAM logic
     Info: RAM logic "dataroad:dataroadbj|Reg:regs|regs" is uninferred due to asynchronous read logic
     Info: RAM logic "dataroad:dataroadbj|DataMemory:datamem|memory" is uninferred due to asynchronous read logic
@@ -2774,21 +2731,14 @@ Info: 960 registers lost all their fanouts during netlist optimizations. The fir
     Info: Register "dataroad:dataroadbj|Reg:regs|regs~1021" lost all its fanouts during netlist optimizations.
     Info: Register "dataroad:dataroadbj|Reg:regs|regs~1022" lost all its fanouts during netlist optimizations.
     Info: Register "dataroad:dataroadbj|Reg:regs|regs~1023" lost all its fanouts during netlist optimizations.
-Info: Generated suppressed messages file F:/文件/大学/__专业课程/_计算机组成/Jz/singleCPU/singleCPU.map.smsg
 Info: Implemented 437 device resources after synthesis - the final resource count might be different
     Info: Implemented 1 input pins
     Info: Implemented 256 output pins
     Info: Implemented 180 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 268 warnings
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 236 warnings
     Info: Peak virtual memory: 253 megabytes
-    Info: Processing ended: Thu Jan 04 10:31:19 2024
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Thu Jan 04 10:42:37 2024
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in F:/文件/大学/__专业课程/_计算机组成/Jz/singleCPU/singleCPU.map.smsg.
 
 

@@ -20,33 +20,33 @@ always @(op)
                     6'b101011: Aluctr = 3'b110;		// sltu
                 endcase
             end
-
-        6'b001101:
+		// 剩下指令只和op字段有关
+        6'b001101:									// ori
             begin
                 {Branch, Jump, RegDst, AluSrc, MemtoReg, RegWr, MemWr, ExtOp} = 8'b00010100;
                 Aluctr = 3'b010;
             end
-        6'b001001:
+        6'b001001:									// addiu
             begin
                 {Branch, Jump, RegDst, AluSrc, MemtoReg, RegWr, MemWr, ExtOp} = 8'b00010101;
                 Aluctr = 3'b000;
             end
-        6'b100011:
+        6'b100011:									// lw
             begin
                 {Branch, Jump, RegDst, AluSrc, MemtoReg, RegWr, MemWr, ExtOp} = 8'b00011101;
                 Aluctr = 3'b000;
             end
-        6'b101011:
+        6'b101011:									// sw
             begin
                 {Branch, Jump, AluSrc, RegWr, MemWr, ExtOp} = 6'b001011;
                 Aluctr = 3'b000;
             end
-        6'b000100:
+        6'b000100:									// beq
             begin
                 {Branch, Jump, AluSrc, RegWr, MemWr} = 5'b10000;
                 Aluctr = 3'b100;
             end
-        6'b000010:
+        6'b000010:									// jump
             begin
                 {Branch, Jump, RegWr, MemWr} = 4'b0100;
             end

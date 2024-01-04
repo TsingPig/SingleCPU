@@ -1,8 +1,13 @@
 module decoding(op, func, RegWr, Branch, Jump, ExtOp, AluSrc, Aluctr, MemWr, MemtoReg, RegDst);
 // 模块声明，接收输入操作码op和功能码func，输出一系列控制信号
-input [5:0] op, func;  // 输入6位的操作码op和功能码func
-output RegWr, Branch, Jump, ExtOp, AluSrc, MemWr, MemtoReg, RegDst;  // 输出各种控制信号
+// 输入：6位的操作码op和功能码func
+// 输出：控制信号RegWr, Branch, Jump, ExtOp, AluSrc, MemWr, MemtoReg, RegDst, Aluctr
+
+input [5:0] op, func;  
+
+output RegWr, Branch, Jump, ExtOp, AluSrc, MemWr, MemtoReg, RegDst;  
 output [2:0] Aluctr;  // 输出3位ALU控制信号
+
 reg RegWr, Branch, Jump, ExtOp, AluSrc, MemWr, MemtoReg, RegDst;  // 寄存器类型的控制信号
 reg [2:0] Aluctr;  // 3位ALU控制信号寄存器
 

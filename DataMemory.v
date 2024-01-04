@@ -1,18 +1,21 @@
-module DataMemory(DataIn,Clk,WrEn,Adr,DataOut);
- parameter n = 32;
- input Clk,WrEn;
- input [n-1:0]DataIn,Adr;
- output reg [n-1:0]DataOut;
- 
- reg [7:0] memory [0:255]; //256 8-bit registers
- 
- always @(negedge Clk) begin
- if(WrEn==1)begin
-  {memory[Adr+3],memory[Adr+2],memory[Adr+1],memory[Adr]} <= DataIn;
-  end
-  end
- always @(Adr)begin
-  DataOut<={memory[Adr+3],memory[Adr+2],memory[Adr+1],memory[Adr]};
-  end
-  
+module DataMemory(
+	input [31:0] DataIn,
+	input Clk,
+	input WrEn,
+	input [7:0] Adr,
+	output reg [31:0] DataOut
+);
+
+	reg [31:0] memory [0:255];
+
+	always @(negedge Clk) begin
+		if(WrEn) begin
+			memory[Adr] <= DataIn;
+		end
+	end
+
+	always @(posedge Clk or posedge WrEn) begin
+		DataOut <= memory[Adr];
+	end
+
 endmodule

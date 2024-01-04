@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for singleCPU
-Thu Jan 04 08:43:35 2024
+Thu Jan 04 10:01:42 2024
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -575,7 +575,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Jan 04 08:43:34 2024
+    Info: Processing started: Thu Jan 04 10:01:42 2024
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off singleCPU -c singleCPU --timing_analysis_only
 Warning: Timing Analysis is analyzing one or more combinational loops as latches
     Warning: Node "decoding:qzbj|Aluctr[2]" is a latch
@@ -714,9 +714,9 @@ Info: tco from clock "clk" to destination pin "AluF[0]" through register "decodi
         Info: Total cell delay = 6.358 ns ( 46.85 % )
         Info: Total interconnect delay = 7.214 ns ( 53.15 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 224 megabytes
-    Info: Processing ended: Thu Jan 04 08:43:36 2024
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 223 megabytes
+    Info: Processing ended: Thu Jan 04 10:01:42 2024
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
 
 

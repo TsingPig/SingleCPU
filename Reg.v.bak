@@ -22,12 +22,7 @@ module Reg(Clk, busW, RegWr, Rw, Ra, Rb, busA, busB);//run
 		regs[i]=32'h0;
 	end
 
-  //always @(negedge Clk) begin
-    //if (run == 1) begin
-      //if (RegWr == 1)
-        //regs[Rw] <= busW;
-    //end
-  //end
+
   always @(negedge Clk) begin
     if (RegWr == 1)
        regs[Rw] <= busW;

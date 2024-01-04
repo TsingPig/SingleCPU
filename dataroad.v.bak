@@ -1,8 +1,8 @@
-module dataroad(clk,RegWr,Branch,Jump,ExtOp,AluSrc,Aluctr,MemWr,MemtoReg,RegDst,
-				instruction,busA,busB,AluB,AluF,busW,Datain,Dataout);
-// Êı¾İÍ¨Â· = È¡Ö¸ + ¼Ä´æÆ÷ + ALU + Êı¾İ´æ´¢Æ÷
-// ÊäÈë£ºÊ±ÖÓ£¬¼Ä´æÆ÷Ğ´Ê¹ÄÜ£¬·ÖÖ§£¬Ìø×ª£¬À©Õ¹²Ù×÷£¬ALU¿ØÖÆ£¬´æ´¢Æ÷Ğ´Ê¹ÄÜ£¬´æ´¢Æ÷µ½¼Ä´æÆ÷£¬¼Ä´æÆ÷Ä¿µÄ
-// Êä³ö£ºÖ¸Áî£¬×ÜÏßA£¬×ÜÏßB£¬ALU×ÜÏß£¬ALU½á¹û£¬×ÜÏßĞ´Ê¹ÄÜ£¬Êı¾İÊäÈë£¬Êı¾İÊä³ö
+module dataroad(clk,RegWr,Branch,Jump,ExtOp,AluSrc,Aluctr,MemWr,MemtoReg,RegDst,instruction
+,busA,busB,AluB,AluF,busW,Datain,Dataout);
+// æ•°æ®é€šè·¯ = å–æŒ‡ + å¯„å­˜å™¨ + ALU + æ•°æ®å­˜å‚¨å™¨
+// è¾“å…¥ï¼šæ—¶é’Ÿï¼Œå¯„å­˜å™¨å†™ä½¿èƒ½ï¼Œåˆ†æ”¯ï¼Œè·³è½¬ï¼Œæ‰©å±•æ“ä½œï¼ŒALUæ§åˆ¶ï¼Œå­˜å‚¨å™¨å†™ä½¿èƒ½ï¼Œå­˜å‚¨å™¨åˆ°å¯„å­˜å™¨ï¼Œå¯„å­˜å™¨ç›®çš„
+// è¾“å‡ºï¼šæŒ‡ä»¤ï¼Œæ€»çº¿Aï¼Œæ€»çº¿Bï¼ŒALUæ€»çº¿ï¼ŒALUç»“æœï¼Œæ€»çº¿å†™ä½¿èƒ½ï¼Œæ•°æ®è¾“å…¥ï¼Œæ•°æ®è¾“å‡º
 parameter n=32;
 input clk,RegWr,Branch,Jump,ExtOp,AluSrc,MemWr,MemtoReg,RegDst;
 input[2:0] Aluctr;
@@ -16,7 +16,7 @@ wire[4:0] Rw,Ra,Rb;
 wire[n-1:0] imm32;
 wire  Zero,Overflow,Ve;
 
-//È¡Ö¸Áî²¿¼ş
+//å–æŒ‡ä»¤éƒ¨ä»¶
 fetchins fetch(.Clk(clk),.Zero(Zero),.Branch(Branch),.Jump(Jump),.inst(instruction));
 assign op=instruction[31:26];
 assign Rs=instruction[25:21];
@@ -25,22 +25,21 @@ assign Rd=instruction[15:11];
 assign func=instruction[5:0];
 assign imm16=instruction[15:0];
 
-//¼Ä´æÆ÷²¿¼ş
-MUX2to1 mux6(Rt,Rd,RegDst,Rw);//Ñ¡Ôñ¼Ä´æÆ÷Ğ´Èë
+//å¯„å­˜å™¨éƒ¨ä»¶
+MUX2to1 mux6(Rt,Rd,RegDst,Rw);//é€‰æ‹©å¯„å­˜å™¨å†™å…¥
 assign Ra=Rs;
 assign Rb=Rt;
-assign Ve=RegWr & ~Overflow;//²»Òç³öÇÒ¿ÉÒÔĞ´Èë
+assign Ve=RegWr & ~Overflow;//ä¸æº¢å‡ºä¸”å¯ä»¥å†™å…¥
 Reg regs(.Clk(clk),.busW(busW),.RegWr(Ve),.Rw(Rw),.Ra(Ra),.Rb(Rb),.busA(busA),.busB(busB));
 
-//ALU²¿¼ş
-assign imm32={{16{imm16[15]&ExtOp}},imm16[15:0]};//imm16À©Õ¹
-MUX2to1 mux7(busB,imm32,AluSrc,AluB);//0 busB 1 imm16À©Õ¹
+//ALUéƒ¨ä»¶
+assign imm32={{16{imm16[15]&ExtOp}},imm16[15:0]};//imm16æ‰©å±•
+MUX2to1 mux7(busB,imm32,AluSrc,AluB);//0 busB 1 imm16æ‰©å±•
 alu alu1(.A(busA),.B(AluB),.ALUctr(Aluctr),.Zero(Zero),.Overflow(Overflow),.Result(AluF));
 
-//Êı¾İ´æ´¢Æ÷²¿¼ş
+//æ•°æ®å­˜å‚¨å™¨éƒ¨ä»¶
 assign Datain=busB;
 DataMemory datamem(.DataIn(Datain),.Clk(clk),.WrEn(MemWr),.Adr(AluF),.DataOut(Dataout));
-MUX2to1 mux8(AluF,Dataout,MemtoReg,busW);//µØÖ·»òÕß´æ´¢Æ÷ÀïµÄÄÚÈİ
-
+MUX2to1 mux8(AluF,Dataout,MemtoReg,busW);//åœ°å€æˆ–è€…å­˜å‚¨å™¨é‡Œçš„å†…å®¹
 
 endmodule

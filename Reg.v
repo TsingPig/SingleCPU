@@ -1,4 +1,4 @@
-module Reg(Clk, busW, RegWr, Rw, Ra, Rb, busA, busB);//run
+module Reg(Clk, busW, RegWr, Rw, Ra, Rb, busA, busB);
 	parameter n = 32;
 	input Clk, RegWr;//, run
 	input [n-1:0] busW;
